@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f2f2f2;
+}
+.container{
+    perspective: 100vh;
+}
+.gift-card{
+    width: 280px;
+    height: 360px;
+    position: absolute;
+    top: 100px;
+    left: 230px;
+    transition: 2s;
+    transform-style: preserve-3d;
+}
+.gift-card:hover{
+    transform: rotateY(180deg);
+}
+.Card{
+    width: 280px;
+    height: 360px;
+    position:left;
+    top: 100px;
+    left: 230px;
+    transition: 2s;
+    transform-style: preserve-3d;
+}
+.Card:hover{
+    transform: rotateX(180deg);
+}
+marquee{
+    color: red;
+    animation: backwards;
+}
+.outside,.inside{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    text-align: center;
+    padding: 1.5rem;
+}
+.outside{
+    background-color: blanchedalmond;
+    box-shadow: inset 0 5px 10px rgb(0,0,0,0.5);
+    position: absolute;
+    backface-visibility: hidden;
+}
+.outside h1{
+    font-size: 3rem;
+    font-weight: bold;
+    color: salmon;
+    margin-bottom:30px;
+}
+.inside{
+    background-color: rgba(255,244,79);
+    box-shadow: inset 0 52px 100px rgb(0,0,0,0.5);
+    /* transform: rotateX(180deg);  */
+}
+.inside h1{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* .gift-card {
+    background-color: #fff;
+    border: 2px solid #f0a500;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    /* opacity: 0; /* Start hidden for animation */
+    /* animation: fadeIn 0.5s forwards; /* Fade-in animation */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* .gift-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); */
+/* } */
+
+.card-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+h1 {
+    color: #f0a500;
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+p {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+}
